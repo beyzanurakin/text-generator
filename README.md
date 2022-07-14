@@ -14,4 +14,4 @@ Text Generator that generates paragraphs according to how many paragraphs and wh
 
 ## Demo
 
-Insert gif or link to demo
+https://beyza-text-generator.netlify.app/
