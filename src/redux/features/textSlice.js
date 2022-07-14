@@ -18,11 +18,18 @@ const textSlice = createSlice({
     status: 'idle',
     error: null,
   },
+  // eslint-disable-next-line no-empty-pattern
   reducers: {},
   extraReducers: {
     [getText.fulfilled]: (state, action) => {
       state.text = action.payload
       state.status = 'idle'
+    },
+    [getText.pending]: (state) => {
+      state.status = 'loading'
+    },
+    [getText.rejected]: (state, action) => {
+      state.error = action.error
     },
   },
 })
